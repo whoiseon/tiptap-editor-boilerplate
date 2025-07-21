@@ -1,6 +1,6 @@
 # Tiptap Editor BoilderPlate
 
-Editor boiler plate made using react + vite and tiptap editor together.
+Editor boiler plate made using react + vite + tailwindcss and tiptap editor together.
 
 Additional features include.
 - Code block highlight extension using low light, high light.js
