@@ -1,0 +1,275 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+/* 여백 초기화 */
+body,
+div,
+ul,
+li,
+dl,
+dd,
+dt,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+fieldset,
+legend,
+p,
+select,
+table,
+th,
+td,
+tr,
+textarea,
+button,
+form,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading 초기화 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+h4 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+h5 {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+h6 {
+  font-size: 0.75rem;
+}
+
+/* a 링크 초기화 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* 폰트 스타일 초기화 */
+address {
+  font-style: normal;
+}
+
+/* 블릿기호 초기화 */
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+/* 테이블 초기화 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  th {
+    font-weight: inherit;
+  }
+}
+
+/* 버튼초기화 */
+button {
+  border: 0;
+}
+
+/* Tiptap Style  */
+.ProseMirror-focused {
+  border: none !important;
+  outline: none !important;
+}
+
+.ProseMirror {
+  min-height: 300px;
+  padding: 15px 0px;
+  padding-bottom: 1.25rem;
+}
+
+.tiptap .is-editor-empty:first-child::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+  font-size: 0.875rem;
+}
+
+.tiptap {
+  p {
+    padding: 0.375rem 0;
+  }
+
+  pre {
+    background: var(--color-stone-950);
+    border-radius: 0.5rem;
+    color: #fff;
+    font-family: inherit;
+    padding: 0.75rem 1rem;
+    line-height: 1.6rem;
+
+    code {
+      background: none;
+      color: inherit;
+      font-size: 1rem;
+      padding: 0;
+    }
+
+    /* Code styling */
+    .hljs-comment,
+    .hljs-quote {
+      color: #616161;
+    }
+
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-attribute,
+    .hljs-tag,
+    .hljs-regexp,
+    .hljs-link,
+    .hljs-name,
+    .hljs-selector-id,
+    .hljs-selector-class {
+      color: #f98181;
+    }
+
+    .hljs-number,
+    .hljs-meta,
+    .hljs-built_in,
+    .hljs-builtin-name,
+    .hljs-literal,
+    .hljs-type,
+    .hljs-params {
+      color: #fbbc88;
+    }
+
+    .hljs-string,
+    .hljs-symbol,
+    .hljs-bullet {
+      color: #b9f18d;
+    }
+
+    .hljs-title,
+    .hljs-section {
+      color: #faf594;
+    }
+
+    .hljs-keyword,
+    .hljs-selector-tag {
+      color: #70cff8;
+    }
+
+    .hljs-emphasis {
+      font-style: italic;
+    }
+
+    .hljs-strong {
+      font-weight: 700;
+    }
+  }
+
+  ul,
+  ol {
+    padding: 0 2rem;
+
+    p {
+      padding: 0;
+    }
+  }
+
+  ul > li {
+    list-style: disc;
+
+    li {
+      list-style: circle;
+    }
+  }
+
+  ol > li {
+    list-style: decimal;
+  }
+
+  blockquote {
+    border-left: 3px solid var(--color-border);
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0.625rem;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #477bff;
+  }
+
+  iframe {
+    padding: 0.625rem 0;
+  }
+
+  .tableWrapper {
+    margin: 1.25rem 0;
+  }
+
+  table {
+    overflow: hidden;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    border: 1px solid var(--color-border);
+    user-select: contain;
+
+    tr {
+      &:nth-child(2n) {
+        background-color: var(--color-background);
+      }
+
+      &:nth-child(2n + 1) {
+        background-color: var(--color-deep-background);
+      }
+
+      td {
+        padding: 0.9375rem 0.375rem;
+        border-right: 1px solid var(--color-border);
+        border-bottom: 1px solid var(--color-border);
+      }
+    }
+  }
+}
+
+.resize-cursor {
+  td:has(.column-resize-handle) {
+    border-right: 2px solid #477bff !important;
+    cursor: col-resize;
+  }
+}
