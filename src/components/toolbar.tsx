@@ -164,7 +164,7 @@ export function Toolbar({ editor }: ToolbarProps) {
   }, [TOOLBAR_ITEMS])
 
   return (
-    <div className="sticky top-0 z-10 bg-stone-900 backdrop-blur-xl border-b border-stone-800 w-full h-11 overflow-x-auto flex items-center justify-start md:justify-center gap-1 px-2 overscroll-contain">
+    <div className="sticky top-0 z-10 bg-stone-900 backdrop-blur-xl border-b border-stone-800 w-full h-11 min-h-11 overflow-x-auto flex items-center justify-start md:justify-center gap-1 px-2 overscroll-contain">
       <div className="flex items-center gap-2.5">
         {Object.entries(groupedItems).map(([groupName, items], groupIndex) => (
           <Fragment key={groupName}>
